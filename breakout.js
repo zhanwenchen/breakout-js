@@ -220,6 +220,9 @@ function draw() {
     x += dx;
     y += dy;
     requestAnimationFrame(draw);
+    if (x<15 || x>480) {
+        console.log(x);
+    }
 }
 
 function renderText(text) {
@@ -231,7 +234,8 @@ function renderText(text) {
 
 var mainLoop = function () {
     renderText('Click here to start');
-    $(window).one('click', function() {
+    $('#breakoutCanvas').one('click', function() {
+        context.textAlign = "left";
         draw();
     });
 }
