@@ -220,9 +220,6 @@ function draw() {
     x += dx;
     y += dy;
     requestAnimationFrame(draw);
-    if (x<15 || x>480) {
-        console.log(x);
-    }
 }
 
 function renderText(text) {
